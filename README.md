@@ -3,6 +3,9 @@
 
 #TASK 1: BINARIZATION
 
+    -Héctor (09/04/2026) --> First implementation of imageBinarization()
+            The function loads the image, converts from RGB to grayscale and reduces gray levels to 1 (black and white).
+
 #TASK 2: ROW SEGMENTATION
 
 #TASK 3: CHARACTER SEGMENTATION
