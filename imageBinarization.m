@@ -10,11 +10,11 @@ function processedImage = imageBinarization(im);
     if(size(sizeIm) == [1 3])
         %If the condition is met, the image is RGB
         %We must convert it to grayscale
-        im = ImagenGrises(im);
+        im = rgb2gray(im);
     end
     %By now, the image is already in grayscale
     %Convert to purely black and white
-    im = ReduceGrises(im, 1);
+    im = reduceGrayLevels(im, 1);
 
     processedImage = im;
 end
