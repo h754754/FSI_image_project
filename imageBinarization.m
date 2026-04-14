@@ -15,6 +15,7 @@ function processedImage = imageBinarization(im);
     %By now, the image is already in grayscale
     %Convert to purely black and white
     threshold = graythresh(im);
+    %this next line is used for testing, remove when necessary
     fprintf("%f", threshold);
     processedImage = imbinarize(im, threshold);
 end
