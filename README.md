@@ -15,4 +15,4 @@
 
 
 ## OVERLEAF DOCUMENTATION
-    Everything related to how any function/task is carried out must be documented on the corresponding [Overleaf file](https://www.overleaf.com/read/nyhdsbgsfjcj#59051f).
+Everything related to how any function/task is carried out must be documented on the corresponding [Overleaf file](https://www.overleaf.com/read/nyhdsbgsfjcj#59051f).
