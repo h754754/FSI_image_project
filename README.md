@@ -1,17 +1,17 @@
 # FSI_image_project_goat
 🐏
 # TO-DO LIST
-- [] TASK 1
-- [] TASK 2
-- [] TASK 3
-- [] TASK 4
-- [] TASK 5
+- [ ] TASK 1
+- [ ] TASK 2
+- [ ] TASK 3
+- [ ] TASK 4
+- [ ] TASK 5
 
-- [] DOCUMENT TASK 1
-- [] DOCUMENT TASK 2
-- [] DOCUMENT TASK 3
-- [] DOCUMENT TASK 4
-- [] DOCUMENT TASK 5
+- [ ] DOCUMENT TASK 1
+- [ ] DOCUMENT TASK 2
+- [ ] DOCUMENT TASK 3
+- [ ] DOCUMENT TASK 4
+- [ ] DOCUMENT TASK 5
 
 
 #TASK 1: BINARIZATION
