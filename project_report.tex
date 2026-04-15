@@ -1,0 +1,63 @@
+
+\documentclass[10pt]{article}
+\usepackage{hyperref}		%implement this package to be able to include links on the document
+\usepackage{mwe}				%Minimal Working Example
+\usepackage{anyfontsize} %package to change font sizes manually instead of the predefined LaTeX sizes
+\usepackage{setspace}			%package to customize line spacing
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage[rightcaption]{sidecap}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\pagenumbering{Roman}
+
+
+\begin{document}	
+	\pagestyle{fancy}
+		\fancyhf{}
+		\fancyfoot[R]{\thepage}
+		\fancyfoot[L]{Sound project 2025-2026. University of Vigo}
+		\fancyhead[C]
+
+
+	\begin{titlepage}
+	
+	
+		\begin{tikzpicture}[overlay]
+			\fill[blue] (12,-27) rectangle (15,4);
+		\end{tikzpicture}
+		\begin{center}
+		
+		\end{center}
+		
+		\vspace{3.5cm}
+		
+		\begin{flushleft}
+		\rule{1\textwidth}{3pt}
+		{\large \textsc{Pablo Sanles Santos
+			\newline
+			Hugo Mera Tato
+			\newline
+			Jorge López Cuns
+			\newline
+			Héctor Costa Portas
+		}	}
+		\end{flushleft}
+		\begin{flushright}
+			{\small University of Vigo}
+		\end{flushright}
+	\end{titlepage}
+	\vfill	
+	
+	
+
+	%FIRST PAGE
+	\renewcommand*\contentsname{Table of contents}
+	\tableofcontents
+	
+\end{document}

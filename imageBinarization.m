@@ -17,5 +17,9 @@ function processedImage = imageBinarization(im);
     threshold = graythresh(im);
     %this next line is used for testing, remove when necessary
     fprintf("%f", threshold);
-    processedImage = imbinarize(im, threshold);
+    processedImage = not(imbinarize(im, threshold));
+    %EXPLANATION FOR THE not()
+    %-----------------------------
+    %For Task 2, we will be preferring to use white text over a black
+    %blackground, therefore we invert the image for now.
 end
