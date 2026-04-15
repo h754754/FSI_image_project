@@ -1,0 +1,95 @@
+\documentclass[10pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{hyperref} % To include links
+\usepackage{anyfontsize}
+\usepackage[a4paper, margin = 2.5cm]{geometry}
+\usepackage{mwe}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\renewcommand{\baselinestretch}{1.25}
+\usepackage{xcolor}
+\definecolor{durisimo}{RGB}{0,160,255}
+\definecolor{durisimo2}{RGB}{7,114,183}
+\definecolor{durisimo3}{RGB}{0,180,255}
+\definecolor{durisimo4}{RGB}{0, 210, 255}
+\usepackage{tikz}
+\usepackage[nottoc]{tocbibind}
+
+
+\pagenumbering{Roman}
+\title{image\_project}
+\author{Héctor }
+\date{April 2026}
+
+\begin{document}
+    
+    %TITLE STARTS
+    \begin{titlepage}
+        \thispagestyle{empty}
+        \newgeometry{left=2cm, right=1cm, top=2cm, bottom=2cm}
+        \begin{tikzpicture}[overlay]
+            \fill[durisimo2] (-10,-3) rectangle (19,-11.05)
+            \fill[durisimo] (-10, -11) rectangle (19, -11.91)
+            \fill[durisimo3] (-10, -11.9) rectangle (19, -12.751)
+            \fill[durisimo4] (-10, -12.75) rectangle (19, -13.25)
+
+            \fill[durisimo2] (-10, -20) rectangle (19, -28)
+        \end{tikzpicture}
+        \begin{spacing}{1}
+            \begin{flushleft}
+            \vspace*{3cm}
+            \fontsize{55}{65}\selectfont {\rmfamily \bfseries OPTICAL \newline CHARACTER\newline RECOGNITION\par}
+            \end{flushleft}
+        \end{spacing}
+        \vspace{3cm}
+        \begin{spacing}{1}
+            \begin{flushleft}
+                {\huge {Fundamentals of Sound and Image project 2025-2026}}
+            \end{flushleft}
+        \end{spacing}
+        \vspace{6cm}
+        \begin{flushleft}
+        \begin{spacing}{1.5}
+            {\huge \textsc{Jorge López Cuns \newline
+            Pablo Sanles Santos \newline
+            Hugo Mera Tato \newline
+            Héctor Costa Portas}}
+        \end{spacing}
+        \end{flushleft}
+        \begin{flushright}
+            \Large{\textbf{Universidade de Vigo}}
+        \end{flushright}
+    \end{titlepage}
+    %TITLE ENDS
+    %DEFINE THE STYLE FOR REGULAR PAGES
+    \pagestyle{fancy}
+        \fancyhf{}
+        \fancyfoot[R]{\thepage}
+        \fancyfoot[L]{Image project 2025-2026. University of Vigo}
+        \fancyhead[C]
+
+\renewcommand*\contentsname{Table of contents}
+\tableofcontents
+\newpage
+\section{Introduction}
+\section{{Task 1: Binarization}}
+    \indent Our first task is related with the conversion of the given image to a binary format, that is, black and white. We will be defining a method to determine whether a given pixel will be converted to black or to white depending on a few parameters. \newline \newline 
+    \begin{enumerate}
+        \item First of all, we convert the image from RGB to grayscale via $rgb2gray.m$, a function already provided by MATLAB.
+        \item Then, we must define a standard to decide if we want to convert a given pixel to white or to black. In other words, a \textbf{threshold}. For example, we can take the mean of the luminance of all pixels in the image. However, there is a function in MATLAB that has already optimized this process, called $graythresh.m$, which is based on the MATLAB function $otsuthresh.m$. \small{\cite{otsu}}
+        \item Once we have a grayscale image and a threshold to have a black-white-defining criterium, we can use $imbinarize.m$ to perform the binarization with these two parameters.
+    \end{enumerate} 
+
+
+\newpage
+
+\begin{thebibliography}
+
+    \bibitem{otsu}
+        \textit{Otsu thresholding:}  \newline \textcolor{blue}{\url{https://engineering.purdue.edu/kak/computervision/ECE661.08/OTSU_paper.pdf}}
+    \addcontentsline{toc}{section}{References}
+
+\end{thebibliography}
+\end{document}
