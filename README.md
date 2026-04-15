@@ -1,7 +1,7 @@
 # FSI_image_project_goat
 🐏
 ## TO-DO LIST
-- [ ] TASK 1
+- [x] TASK 1
 - [ ] TASK 2
 - [ ] TASK 3
 - [ ] TASK 4
