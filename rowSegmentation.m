@@ -14,8 +14,11 @@ function [segmentedRows, rowLocationPairs] = rowSegmentation(im)
 
     %compute where the function transitions from 0 to 1 and viceversa
     transitions = diff([0;segmentedRows;0]);
+    %diff returns 1 in a transition from 0 to 1
+    %            -1 in a transition from 1 to 0
+    %             0 if  x(i+1) - x(i) = 0
     startRow = find(transitions == 1);
-    endRow = find(transitions == -1) -1;
+    endRow = find(transitions == -1) -1; %we substract 1 because diff marks the first zero after the segment
     rowLocationPairs = [startRow endRow];
 
 end
