@@ -6,7 +6,7 @@ function [segmentedRows, rowLocationPairs] = rowSegmentation(im)
 
     %For now, we will use the mean as threshold to determine whether a row
     %is relevant or not
-    threshold = mean(segmentedRows);
+    threshold = mean(segmentedRows) + 0.3 * std(segmentedRows);
     segmentedRows = (segmentedRows > threshold);
     figure; plot(segmentedRows);
 
@@ -19,6 +19,10 @@ function [segmentedRows, rowLocationPairs] = rowSegmentation(im)
     %             0 if  x(i+1) - x(i) = 0
     startRow = find(transitions == 1);
     endRow = find(transitions == -1) -1; %we substract 1 because diff marks the first zero after the segment
+    
     rowLocationPairs = [startRow endRow];
-
+    % remove straight lines from the representation (get text rows only)
+    % essentially, we take the rows whose height is reasonable for a text
+    % to be held within
+    rowLocationPairs = rowLocationPairs(abs(rowLocationPairs(:,1) - rowLocationPairs(:,2)) >=12,:);
 end
