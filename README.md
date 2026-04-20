@@ -5,7 +5,7 @@
 - [X] TASK 1 ADVANCED
 - [x] TASK 2
 - [ ] TASK 2 ADVANCED
-- [ ] TASK 3
+- [x] TASK 3
 - [ ] TASK 3 ADVANCED
 - [ ] TASK 4
 - [ ] TASK 5
@@ -22,3 +22,9 @@
 
 ## OVERLEAF DOCUMENTATION
 Everything related to how any function/task is carried out must be documented on the corresponding [Overleaf file](https://www.overleaf.com/read/nyhdsbgsfjcj#59051f).
+
+
+### DIARY
+
+### 19/04/26
+- Hugo Mera: performed Task 3, character segmentation. Still pending to fine-tune it.
