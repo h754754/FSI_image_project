@@ -26,8 +26,10 @@ Everything related to how any function/task is carried out must be documented on
 
 ### DIARY
 
-### 12/04/26
+### 09/04/26
 - Héctor: Task 1, Task 1 advanced, Task 1 documentation.
+### 15/04/26
+- Héctor: Task 2
 ### 19/04/26
 - Hugo Mera: performed Task 3, character segmentation. Still pending to fine-tune it.
 
