@@ -82,7 +82,27 @@
         \item Once we have a grayscale image and a threshold to have a black-white-defining criterium, we can use $imbinarize.m$ to perform the binarization with these two parameters.
     \end{enumerate} 
 
-
+\section{Task 2: Row segmentation}
+\section{Task 3: Character segmentation}
+\section{Task 4: Character preprocessing}
+    \indent In order to be able to match the images we are segmenting to an actual character, we will need to standardize in some way the dimensions of each character. As suggested on the slides that were presented to us on the day of the project's explanation, we chose the size to be 32x32 pixels. \newline \newline
+    \indent Here is an example of how the function modifies a character to fit our sizing:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{task4_example.png}
+    \caption{Character preprocessing for letter "A"}
+    \textsubscript{Left image is a screen capture. Right image is the processed result}
+    \label{fig:placeholder}
+\end{figure}
+    \newline
+    \indent The function works in the following way:
+    \begin{enumerate}
+        \item Check the size of the received image. If any dimension is greater than 32, we must scale it down.
+        \item Once dimensions belong to our working scope (less than or equal to 32), we check how many rows or columns we would need to "fill" the image with black rows or columns up to the point of it becoming a 32x32 square.
+        \item Decide the points where said black rows or columns will be located. If any dimension is odd, we decided to bias a left and down location. That is to say, the extra row or column will always tend to go a bit above/to the right of the actual character.
+        \item Create a 32x32 canvas and fill it with our now ready-to-go character.
+    \end{enumerate}
+\section{Task 5: Creating our alphabet}
 \newpage
 
 \begin{thebibliography}
