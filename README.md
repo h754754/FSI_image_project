@@ -35,3 +35,7 @@ Everything related to how any function/task is carried out must be documented on
 
 ### 26/04/26
 - Héctor: Task 4, Task 4 documentation.
+
+### 27/04/26
+- Hugo: corrected threshold of part 1. Characters like TU, TE, etc. are no longer joint. Pending to correct TA overlapping.
+
