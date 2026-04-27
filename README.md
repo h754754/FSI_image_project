@@ -7,14 +7,14 @@
 - [ ] TASK 2 ADVANCED
 - [x] TASK 3
 - [ ] TASK 3 ADVANCED
-- [ ] TASK 4
+- [X] TASK 4
 - [ ] TASK 5
 - [ ] TASK 6
 
 - [X] DOCUMENT TASK 1
 - [ ] DOCUMENT TASK 2
 - [ ] DOCUMENT TASK 3
-- [ ] DOCUMENT TASK 4
+- [X] DOCUMENT TASK 4
 - [ ] DOCUMENT TASK 5
 - [ ] DOCUMENT TASK 6
 - [ ] DOCUMENT TROUBLESHOOTING
@@ -26,5 +26,16 @@ Everything related to how any function/task is carried out must be documented on
 
 ### DIARY
 
+### 09/04/26
+- Héctor: Task 1, Task 1 advanced, Task 1 documentation.
+### 15/04/26
+- Héctor: Task 2
 ### 19/04/26
 - Hugo Mera: performed Task 3, character segmentation. Still pending to fine-tune it.
+
+### 26/04/26
+- Héctor: Task 4, Task 4 documentation.
+
+### 27/04/26
+- Hugo: corrected threshold of part 1. Characters like TU, TE, etc. are no longer joint. Pending to correct TA overlapping.
+- Hugo: coorected character segmentation by modifying the threshold with "strange" recongized characters.
