@@ -7,6 +7,7 @@ function processedImage = imageBinarization(im);
 % =================================================================
     %First, convert to black and white
     sizeIm = size(im);
+    [rows, cols] = size(im);
     if(size(sizeIm) == [1 3])
         %If the condition is met, the image is RGB
         %We must convert it to grayscale
@@ -14,7 +15,9 @@ function processedImage = imageBinarization(im);
     end
     %By now, the image is already in grayscale
     %Convert to purely black and white
-    threshold = graythresh(im);
+
+    %Substracted 0.2 from the threshold to separate joint characters.
+    threshold = graythresh(im)-0.2;
     %this next line is used for testing, remove when necessary
     fprintf("%f", threshold);
     processedImage = not(imbinarize(im, threshold));

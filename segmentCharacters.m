@@ -28,20 +28,40 @@ function characters = segmentCharacters(img, rows)
         % remove vertical borders
         % 5 was chosen so that it is high enough to discard borders but 
         % low enough to allow the thinnest character, the I
-        mask = (char_ends - char_starts) > 5;
-        char_starts =char_starts(mask);
+        mask = (char_ends - char_starts) >=1;
+        char_starts = char_starts(mask);
         char_ends = char_ends(mask);
 
         for j = 1:length(char_starts)
 
             char_img = row_img(:, char_starts(j):char_ends(j));
-            figure();imshow(char_img);
+            %figure();imshow(char_img);
             rows_nonzero = any(char_img, 2);
             char_img = char_img(rows_nonzero, :);
 
-            characters{char_count} = char_img;
-            char_count = char_count + 1;
+            if (width(char_img)/height(char_img)) < 1.5
+                characters{char_count} = char_img;
+                char_count = char_count + 1;
+            else
+                wide_proj = sum(char_img, 1);
+                [~, split_col] = min(wide_proj);
+
+                % Make sure it is not the beggining
+                if split_col == 1
+                    split_col = 2;
+                elseif split_col == size(char_img,2)
+                    split_col = size(char_img,2) - 1;
+                end
+
+                left_img = char_img(:, 1:split_col);
+                right_img = char_img(:, split_col+1:end);
+                characters{char_count} = left_img;
+                char_count = char_count + 1;
+                characters{char_count} = right_img;
+                char_count = char_count + 1;
+
+            
         end
-        break;
+        
     end
 end
