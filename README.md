@@ -38,4 +38,7 @@ Everything related to how any function/task is carried out must be documented on
 
 ### 27/04/26
 - Hugo: corrected threshold of part 1. Characters like TU, TE, etc. are no longer joint. Pending to correct TA overlapping.
-- Hugo: coorected character segmentation by modifying the threshold with "strange" recongized characters.
+- Hugo: corrected character segmentation by modifying the threshold with "strange" recongized characters.
+
+### 28/04/26
+- Héctor: Task 2 documentation, Task 3 documentation.
