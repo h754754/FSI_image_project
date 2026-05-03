@@ -14,10 +14,10 @@ function characters = segmentCharacters(img, rows)
         row_end   = rows(i, 2);
 
         row_img = img(row_start:row_end, :);
-        figure();imshow(row_img);
+        %figure();imshow(row_img);
         proj = sum(row_img, 1);
-        figure;
-        plot(proj)
+        %figure;
+        %plot(proj)
 
         is_text = proj > 3;
         % calculation of the start and end markers of a character
@@ -38,7 +38,7 @@ function characters = segmentCharacters(img, rows)
             %figure();imshow(char_img);
             rows_nonzero = any(char_img, 2);
             char_img = char_img(rows_nonzero, :);
-
+            %imshow(char_img); %only for debugging purposes
             if (width(char_img)/height(char_img)) < 1.5
                 characters{char_count} = char_img;
                 char_count = char_count + 1;

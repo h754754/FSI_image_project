@@ -8,7 +8,7 @@ function [segmentedRows, rowLocationPairs] = rowSegmentation(im)
     %is relevant or not
     threshold = mean(segmentedRows) + 0.3 * std(segmentedRows);
     segmentedRows = (segmentedRows > threshold);
-    figure; plot(segmentedRows);
+    %figure; plot(segmentedRows);
 
     %Find start-end pairs
 

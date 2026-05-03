@@ -14,4 +14,5 @@ function [processedChar] = tempCharProcess(charbmp)
     processedChar = im2double(processedChar);% $
     processedChar = im2gray(processedChar);% $
     processedChar = imresize(processedChar,[32 32]);% $
+
 end
