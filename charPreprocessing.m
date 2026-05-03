@@ -5,11 +5,12 @@ function charPreprocessed = charPreprocessing(imbw)
     
     %First, we check the size of the image
     %as well as how many rows/columns we are missing
-    [rows,cols] = size(imbw);
+
+    [rows,cols,~] = size(imbw);
     if rows>32 || cols>32
         scale = min(32/rows, 32/cols);
         imbw = imresize(imbw, scale);
-        [rows,cols] = size(imbw);
+        [rows,cols,~] = size(imbw);
     end
     remainingRows = 32 - rows;
     remainingCols = 32 - cols;

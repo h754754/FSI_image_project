@@ -8,8 +8,11 @@ function [metric] = charCompare(readChar,dbChar)
     
     % Computes the difference between two images
     % Extracted from: https://www.mathworks.com/help/images/ref/imabsdiff.html
-    diff_image = imabsdiff(readChar,dbChar);
-    diff_matrix = im2double(diff_image);
+    
+    % DEPRECATED
+    %diff_image = imabsdiff(readChar,dbChar);
+    %diff_matrix = im2double(diff_image);
+    
     
     % for debugging purposes only
     % imshow(diff_matrix);
@@ -18,5 +21,8 @@ function [metric] = charCompare(readChar,dbChar)
     % difference is smaller
     % Therefore, the criteria to follow would be to take the character with
     % the lowest metric as a match
-    metric = sum(diff_matrix,"all");
+    
+    % ssim computes the structural image similarity
+    metric = ssim(readChar,dbChar);
+    metric = corr2(readChar,dbChar);
 end

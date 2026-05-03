@@ -42,3 +42,9 @@ Everything related to how any function/task is carried out must be documented on
 
 ### 28/04/26
 - Héctor: Task 2 documentation, Task 3 documentation.
+- Jorge : First approach to Task 6 (prior to the developement of Task 5
+
+### 03/05/26
+- Jorge: Error debugging for task 5 -> task 5 alphabet part bug solved (use bold characters for database and threshold tuning)
+- Jorge: Approach changed for task 6: two new possibilities, structural similarity with ssim and corr2.The best for the moment is corr2.
+- Jorge: Completed pipeline.m to show the full result
