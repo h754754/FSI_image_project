@@ -1,4 +1,4 @@
-function characters = segmentCharacters(img, rows)
+function [characters, char_starts, char_ends] = segmentCharacters(img, rows)
 
     % Ensure binary image
     if ~islogical(img)
