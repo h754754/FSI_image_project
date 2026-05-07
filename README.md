@@ -8,8 +8,8 @@
 - [x] TASK 3
 - [ ] TASK 3 ADVANCED
 - [X] TASK 4
-- [ ] TASK 5
-- [ ] TASK 6
+- [X] TASK 5
+- [X] TASK 6
 
 - [X] DOCUMENT TASK 1
 - [X] DOCUMENT TASK 2
@@ -48,3 +48,7 @@ Everything related to how any function/task is carried out must be documented on
 - Jorge: Error debugging for task 5 -> task 5 alphabet part bug solved (use bold characters for database and threshold tuning)
 - Jorge: Approach changed for task 6: two new possibilities, structural similarity with ssim and corr2.The best for the moment is corr2.
 - Jorge: Completed pipeline.m to show the full result
+
+### 07/05/26
+- Hugo: added feature to detect spaces and put them in the output text.
+- Hugo: solved issue with character segmentation.
