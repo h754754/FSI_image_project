@@ -37,14 +37,11 @@ function [characters, char_starts, char_ends] = segmentCharacters(img, rows)
         mask = (char_ends - char_starts) >=1;
         char_starts = char_starts(mask);
         char_ends = char_ends(mask);
-
-        for j = 1:char_length
+        j = 1;
+        while j <= length(char_starts)
             % after all the reading, now char_starts has the true
             % length,i.e., considering the previously considered joint
             % characters
-            if (j > length(char_starts))
-                break
-            end
             char_img = row_img(:, char_starts(j):char_ends(j));
             %figure();imshow(char_img);
             rows_nonzero = any(char_img, 2);
@@ -70,20 +67,22 @@ function [characters, char_starts, char_ends] = segmentCharacters(img, rows)
                 % save the characters in a different cell
                 left_img = char_img(:, 1:split_col);
                 right_img = char_img(:, split_col+1:end);
-                
+
                 characters{char_count} = left_img;
-                char_starts = [char_starts(1:char_count-1),split_col,char_starts(split_col:end)];
+                split_position = char_starts(j) + split_col;
+                % insert the splitted start after the "joint" start
+                char_starts = [char_starts(1:j),split_position,char_starts(j + 1:end)];
                 
                 char_count = char_count + 1;
-                char_ends = [char_ends(1:char_count-1),split_col,char_ends(split_col:end)];
+                % insert the splitted end before the "join" end
+                char_ends = [char_ends(1:j-1),split_position,char_ends(j:end)];
                 characters{char_count} = right_img;
-                
-                % prepare for next iteration
                 char_count = char_count + 1;
-                
-            
-        end
-        
+                % we have incresed in 1 the number of characters, so we
+                % have to do the same with the iteration variable j
+                j = j+1;
+            end
+            j = j+1;
         end
         % finally, we trim out the empty cells
         characters = characters(1:length(char_starts));

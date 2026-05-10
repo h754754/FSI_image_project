@@ -11,7 +11,7 @@ function [estimatedChar] = matchCharacter(readChar,chardb)
     % The lines with a $ after them will be replaced/removed after the
     % database is created
 
-    nchars = length(chardb);% $
+
 
     % since the characters are 32x32, the maximum difference 
     % we can have is 32x32, which would be between a full 
