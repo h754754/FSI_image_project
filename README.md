@@ -52,3 +52,8 @@ Everything related to how any function/task is carried out must be documented on
 ### 07/05/26
 - Hugo: added feature to detect spaces and put them in the output text.
 - Hugo: solved issue with character segmentation.
+
+### 10/05/26
+- Jorge: Corrected charPreprocessing.m -> all characters are scaled.
+- Jorge: Corrected segmentCharacters.m -> characters that were in principle taken jointly, even after Hugo's correction, lead to errors in char_start and char_end list.
+- Jorge: Based on the aforementioned corrections, new database was created in charDB_remastered.mat, in the db property.

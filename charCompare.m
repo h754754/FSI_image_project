@@ -23,6 +23,8 @@ function [metric] = charCompare(readChar,dbChar)
     % the lowest metric as a match
     
     % ssim computes the structural image similarity
-    metric = ssim(readChar,dbChar);
-    metric = corr2(readChar,dbChar);
+    metric1 = ssim(readChar,dbChar);
+    % correlation in 2 dimensions (normalized)
+    metric2 = (corr2(readChar,dbChar) + 1) / 2;
+    metric = metric2;
 end
