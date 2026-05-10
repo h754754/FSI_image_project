@@ -7,11 +7,11 @@ function charPreprocessed = charPreprocessing(imbw)
     %as well as how many rows/columns we are missing
 
     [rows,cols,~] = size(imbw);
-    if rows>32 || cols>32
-        scale = min(32/rows, 32/cols);
-        imbw = imresize(imbw, scale);
-        [rows,cols,~] = size(imbw);
-    end
+    
+    scale = min(28/rows, 28/cols);
+    imbw = imresize(imbw, scale);
+    [rows,cols,~] = size(imbw);
+    
     remainingRows = 32 - rows;
     remainingCols = 32 - cols;
 
@@ -25,7 +25,7 @@ function charPreprocessed = charPreprocessing(imbw)
     leftCols = floor(remainingCols/2); %Columns to add to the left
                                        %Same logis as for the rows
     %We create the canvas for our final image
-    canvas = zeros(32);
+    canvas = zeros(32,32);
 
     %Place the original image on our canvas
     canvas(upperRows+1:upperRows+rows, leftCols+1:leftCols+cols) = imbw;

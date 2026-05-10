@@ -17,7 +17,8 @@ function [estimatedChar] = matchCharacter(readChar,chardb)
     % we can have is 32x32, which would be between a full 
     % black and a full white char
     highestMetric = -1;
-    estimatedChar = "";
+    % set a unknown character placeholder
+    estimatedChar = "#";
     
     for i=chardb.keys()
         dbCharName = i{1};
@@ -29,8 +30,8 @@ function [estimatedChar] = matchCharacter(readChar,chardb)
         % NOTE that readChar is supposed to have already passed this
         % processing
 
-        thismetric = charCompare(removeEmpty(readChar),removeEmpty(dbCharImage));
-
+        thismetric = charCompare(readChar,dbCharImage);
+        
         if thismetric > highestMetric
             highestMetric = thismetric;
             estimatedChar = dbCharName;
