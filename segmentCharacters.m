@@ -1,4 +1,4 @@
-function characters = segmentCharacters(img, rows)
+function [characters, char_starts, char_ends] = segmentCharacters(img, rows)
 
     % Ensure binary image
     if ~islogical(img)
@@ -19,7 +19,7 @@ function characters = segmentCharacters(img, rows)
         %figure;
         %plot(proj)
 
-        is_text = proj > 3;
+        is_text = proj > 0;
         % calculation of the start and end markers of a character
         diff_proj = diff([0 is_text 0]);
         char_starts = find(diff_proj == 1);
