@@ -11,6 +11,8 @@ imbw = imageBinarization(imdb);
 
 % ROW SEGMENTATION (Task 2)
 [segmentedRows, rowLocationPairs] = rowSegmentation(imbw);
+% ROW SEGMENTATION (Task 2 ADVANCED)
+%[blobBoundingBox,rowLocationPairs] = segmentRowBlobs(imbw);
 
 nRows = size(rowLocationPairs,1);
 % DEBUGGING/TESTING DATA
