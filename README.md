@@ -16,7 +16,7 @@
 - [X] DOCUMENT TASK 3
 - [X] DOCUMENT TASK 4
 - [ ] DOCUMENT TASK 5
-- [ ] DOCUMENT TASK 6
+- [X] DOCUMENT TASK 6
 - [ ] DOCUMENT TROUBLESHOOTING
 
 
@@ -58,3 +58,6 @@ Everything related to how any function/task is carried out must be documented on
 - Jorge: Corrected charPreprocessing.m -> all characters are scaled.
 - Jorge: Corrected segmentCharacters.m -> characters that were in principle taken jointly, even after Hugo's correction, lead to errors in char_start and char_end list.
 - Jorge: Based on the aforementioned corrections, new database was created in charDB_remastered.mat, in the db property.
+
+### 13/05/26
+- Jorge: added advanced option for Task 2 (row segementation with bwlabel).
