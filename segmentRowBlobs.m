@@ -14,7 +14,7 @@ lineBlob = strel('line',20,0);
 rowBlobs = imdilate(im,lineBlob);
 
 % for debugging purposes only
-%imshow(rowBlobs);
+imshow(rowBlobs);
 
 blobBoundingBox = regionprops(rowBlobs,"BoundingBox");
 % BoundingBox returns [x,y,width,height]

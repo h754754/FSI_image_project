@@ -1,5 +1,5 @@
 function charPreprocessed = charPreprocessing(imbw)
-%CHARPREPROCESSING Summary of this function goes here
+%CHARPREPROCESSING 
 %   Receives a segmented character image and 
 %   converts it to an square image 32x32
     
