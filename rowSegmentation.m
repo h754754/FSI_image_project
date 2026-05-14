@@ -7,7 +7,7 @@ function [segmentedRows, rowLocationPairs] = rowSegmentation(im)
 %       - rowLocationPairs: vertical position of the rows in the image
 %   Its purpose is to detect the rows
     segmentedRows = sum(im, 2); %Returns a vector that contains the sum of each row
-    plot(segmentedRows);
+    %plot(segmentedRows);
 
     %For now, we will use the mean as threshold to determine whether a row
     %is relevant or not
