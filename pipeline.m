@@ -1,6 +1,7 @@
 %% TEST PIPELINE
 charDB = load ("charDB_remastered.mat").db;
 
+% INSERT AS THE ARGUMENT TO IMREAD THE FILENAME OF THE TEXT IMAGE
 imo = imread("test.bmp");
 imdb = im2double(imo);
 
